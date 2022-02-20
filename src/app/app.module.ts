@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
+import { NotesComponent } from './notes/notes.component';
+import { TodosComponent } from './todos/todos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabsComponent,
-    BookmarksComponent
+    BookmarksComponent,
+    NotesComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,
