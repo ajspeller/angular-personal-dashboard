@@ -44,6 +44,10 @@
   background-color: rgba(violet, 0.5);
 
   border-radius: 10px;
+
+  opacity: 0.7;
+
+  transition: all 0.2s ease-out;
 }
 
 .bookmarks-tab .tab-tile::before {
@@ -56,4 +60,9 @@
 
 .notes-tab .tab-tile::before {
   background: linear-gradient(45deg, #d2cdff, #5fffbc);
+}
+
+.tab-tile:hover::before {
+  opacity: 1;
+  transform: scale(1.1);
 }
