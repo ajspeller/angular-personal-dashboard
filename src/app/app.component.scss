@@ -35,6 +35,7 @@
 .content-section {
   // background-color: cadetblue;
   flex-grow: 1;
+  min-height: 0; // fixes overflow on y axis when a lot of tile are added
 }
 
 .bottom-section {

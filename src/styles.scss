@@ -7,20 +7,24 @@
 
 @import url(https://fonts.googleapis.com/css?family=Material+Icons+Outlined);
 
-
-
 html {
-  font-family: 'Inter', san-serif;
+  font-family: "Inter", san-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 h1 {
-  font-size:48px;
+  font-size: 48px;
 }
 
 h2 {
   font-size: 40px;
+}
+
+.container {
+  max-width: 850px;
+  margin: auto;
 }
