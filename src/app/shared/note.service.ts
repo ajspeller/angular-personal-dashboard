@@ -5,11 +5,7 @@ import { Note } from './note.model';
   providedIn: 'root',
 })
 export class NoteService {
-  notes: Note[] = [
-    new Note('Taxes 2022', 'Gather paper work for accountant'),
-    new Note('South Africa 2023', 'Start savings account for trip'),
-    new Note('Drink Water', 'Order a new water bottle from Amazon.com'),
-  ];
+  notes: Note[] = [];
 
   constructor() {}
 
