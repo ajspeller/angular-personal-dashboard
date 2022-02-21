@@ -2,19 +2,31 @@
   <h2 class="is-bold">New Note</h2>
 
   <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
-    <input
-      ngModel
-      name="title"
-      class="textbox"
-      type="text"
-      placeholder="Enter note title..."
-    />
-    <textarea
-      ngModel
-      name="content"
-      class="textarea"
-      placeholder="Enter note content..."
-    ></textarea>
+    <div class="form-field">
+      <input
+        #titleField="ngModel"
+        required
+        ngModel
+        name="title"
+        class="textbox"
+        type="text"
+        placeholder="Enter note title..."
+        minlength="3"
+      />
+      <ng-container *ngIf="titleField.invalid && !titleField.pristine">
+        <p *ngIf="titleField.errors?.required">Please enter a note title</p>
+        <p *ngIf="titleField.errors?.minlength">Please enter a note title of at least 3 characters</p>
+      </ng-container>
+    </div>
+
+    <div class="form-field">
+      <textarea
+        ngModel
+        name="content"
+        class="textarea"
+        placeholder="Enter note content..."
+      ></textarea>
+    </div>
 
     <div class="btns-container align-end">
       <a routerLink="../" class="btn">Cancel</a>
