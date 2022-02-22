@@ -13,7 +13,7 @@ export class NoteService {
     return [...this.notes];
   }
 
-  getNote(id: string): Note | undefined {
+  getNote(id: string | null): Note | undefined {
     return this.notes.find((note) => note.id === id);
   }
 
