@@ -2,7 +2,7 @@
   <div class="check-box">
     <i class="material-icons-outlined">check</i>
   </div>
-  <p class="todo-text">{{ todo.id }} {{ todo.text }}</p>
+  <p class="todo-text">{{ todo.text }}</p>
 
   <div class="todo-item-actions" (click)="$event.stopPropagation()">
     <div (click)="onEdit()" class="btn todo-item-action-btn">
