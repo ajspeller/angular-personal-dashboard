@@ -32,6 +32,5 @@ export class TodoService {
 
   deleteTodo(id: string) {
     this.todos = this.todos.filter((t) => t.id !== id);
-    this.getTodos();
   }
 }
