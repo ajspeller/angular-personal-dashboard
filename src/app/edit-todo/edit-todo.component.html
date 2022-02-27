@@ -3,7 +3,7 @@
 
   <p *ngIf="!todo">Todo not found</p>
 
-  <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+  <form *ngIf="todo" #form="ngForm" (ngSubmit)="onFormSubmit(form)">
     <div class="form-field">
       <input
         #textField="ngModel"
@@ -23,7 +23,7 @@
 
     <div class="btns-container align-end">
       <a routerLink="../" class="btn">Cancel</a>
-      <button type="submit" class="btn align-end" [disabled]="textField.pristine">Edit Todo</button>
+      <button type="submit" class="btn align-end" [disabled]="textField.pristine">Save Todo</button>
     </div>
   </form>
 </div>

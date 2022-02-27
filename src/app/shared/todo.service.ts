@@ -26,7 +26,6 @@ export class TodoService {
   }
 
   updateTodo(id: string, updatedFields: Partial<Todo>) {
-    console.log({ info: 'updateTodo called', id });
     const todo = this.getTodo(id);
     Object.assign(todo, updatedFields);
   }
