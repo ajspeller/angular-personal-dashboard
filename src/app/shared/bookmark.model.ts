@@ -6,5 +6,8 @@ export class Bookmark {
   constructor(public name: string, url: string) {
     this.id = uuidv4();
     this.url = new URL(url);
+    if (!name) {
+      this.name = this.url.hostname;
+    }
   }
 }
