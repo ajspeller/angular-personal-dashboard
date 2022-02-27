@@ -1,4 +1,6 @@
 <div class="bookmark-tile">
-  <img src="https://cnn.com/favicon.ico" alt="Site favicon" />
-  <p class="tile-text">CNN</p>
+  <div class="tile-icon">
+    <img [src]="faviconUrl" alt="Site favicon" />
+  </div>
+  <p class="tile-text">{{ bookmark.name }}</p>
 </div>

@@ -5,7 +5,14 @@ import { Bookmark } from './bookmark.model';
   providedIn: 'root',
 })
 export class BookmarkService {
-  bookmarks: Bookmark[] = [];
+  bookmarks: Bookmark[] = [
+    new Bookmark('Wikipedia', 'https://wikipedia.org'),
+    new Bookmark('Youtube', 'https://youtube.com'),
+    new Bookmark('Apple', 'https://apple.com'),
+    new Bookmark('Microsoft', 'https://microsoft.com'),
+    new Bookmark('AMC', 'https://amc.com'),
+    new Bookmark('ESPN', 'https://espn.com'),
+  ];
 
   constructor() {}
 
@@ -23,7 +30,7 @@ export class BookmarkService {
 
   updateBookmark(id: string, updatedFields: Partial<Bookmark>) {
     const bookmark = this.getBookmark(id);
-    Object.assign(bookmark, updatedFields)
+    Object.assign(bookmark, updatedFields);
   }
 
   deleteBookmark(id: string) {

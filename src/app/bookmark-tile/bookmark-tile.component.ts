@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Bookmark } from './../shared/bookmark.model';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bookmark-tile',
   templateUrl: './bookmark-tile.component.html',
-  styleUrls: ['./bookmark-tile.component.scss']
+  styleUrls: ['./bookmark-tile.component.scss'],
 })
 export class BookmarkTileComponent implements OnInit {
-
-  constructor() { }
+  @Input() bookmark!: Bookmark;
+  faviconUrl = '';
+  constructor() {}
 
   ngOnInit(): void {
+    if (this.bookmark) {
+      this.faviconUrl = `${this.bookmark.url.origin}/favicon.ico`;
+    }
   }
-
 }
