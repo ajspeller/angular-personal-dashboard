@@ -5,12 +5,7 @@ import { Todo } from './todo.model';
   providedIn: 'root',
 })
 export class TodoService {
-  todos: Todo[] = [
-    new Todo('todo 1'),
-    new Todo('todo 2'),
-    new Todo('todo 3'),
-    new Todo('todo 4'),
-  ];
+  todos: Todo[] = [];
   constructor() {}
 
   getTodos() {
