@@ -5,7 +5,12 @@ import { Todo } from './todo.model';
   providedIn: 'root',
 })
 export class TodoService {
-  todos: Todo[] = [];
+  todos: Todo[] = [
+    new Todo('this is a test'),
+    new Todo(
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla libero eveniet, iste atque optio laudantium, aut saepe explicabo reprehenderit enim, culpa distinctio aperiam vel sunt? Officia natus ipsa reprehenderit similique'
+    ),
+  ];
   constructor() {}
 
   getTodos() {
@@ -21,11 +26,13 @@ export class TodoService {
   }
 
   updateTodo(id: string, updatedFields: Partial<Todo>) {
+    console.log({ info: 'updateTodo called', id });
     const todo = this.getTodo(id);
     Object.assign(todo, updatedFields);
   }
 
   deleteTodo(id: string) {
     this.todos = this.todos.filter((t) => t.id !== id);
+    this.getTodos();
   }
 }
